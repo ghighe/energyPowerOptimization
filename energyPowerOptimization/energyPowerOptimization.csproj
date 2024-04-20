@@ -97,6 +97,7 @@
     <Compile Include="Products\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolarPanel.cs" />
     <Compile Include="userControls\UC_optimizareConsum.cs">
       <SubType>UserControl</SubType>
     </Compile>
