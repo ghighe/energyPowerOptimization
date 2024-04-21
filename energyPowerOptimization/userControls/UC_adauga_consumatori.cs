@@ -85,7 +85,7 @@ namespace energyPowerOptimization.userControls
                 }
                 wasWrittenToExcel = true;
             }
-            MessageBox.Show("Data added successfully to excel");
+            MessageBox.Show("Data added successfully to DB");
         }
 
         private void LoadDataFromExcelFile()
@@ -96,7 +96,7 @@ namespace energyPowerOptimization.userControls
                 DataTable dt = new DataTable();
 
                 //creaza headerele pentru datatable pe baza excelului
-                for (int columnIndex = 1; columnIndex <= ws.Dimension.End.Column - 3; columnIndex++)
+                for (int columnIndex = 1; columnIndex <= ws.Dimension.End.Column - 5; columnIndex++)
                 {
                     //MessageBox.Show(columnIndex.ToString());
                     DataColumn newColumn = dt.Columns.Add();

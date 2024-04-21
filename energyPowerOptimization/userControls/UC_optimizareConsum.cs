@@ -25,6 +25,37 @@ namespace energyPowerOptimization.userControls
             nrBaterii_TextBox1.Enabled = false;
         }
 
+        private void storeDataInExcelFile(String val1, String header, int index)
+        {
+
+            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            {
+                //Console.WriteLine(package.Workbook.Worksheets.Count > 0);
+                //selecteaza prima pagina a excelului la index 0
+                if (package.Workbook.Worksheets.Count >= 0)
+                {
+                    ExcelWorksheet ws = package.Workbook.Worksheets[0];
+
+                    //MessageBox.Show(rowIndex.ToString());
+                    //add headers in the first row
+                    ws.Cells[1, index].Value = header;
+                    //add data to the available row 
+                    ws.Cells[2, index].Value = val1;
+                }
+                //save changes
+                try
+                {
+                    package.Save();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Nu s-a putut salva in fisierul excel, verificati daca acesta este deschis! " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            MessageBox.Show("Data added successfully to DB");
+        }
+
         private void getTotalConsumptionfromExcel()
         {
             using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
@@ -49,13 +80,21 @@ namespace energyPowerOptimization.userControls
         {
             if(nrPanouri_TextBox.Text != "")
             {
-                startProgressBar(solarPanel_ProgressBar1);
+               startProgressBar(solarPanel_ProgressBar1);
                 int nrPanouri;
+                double initialOutput;
                 int.TryParse(nrPanouri_TextBox.Text, out nrPanouri);
+                double.TryParse(consumInitial_TextBox.Text, out initialOutput);
                 SolarPanel sp = new SolarPanel(nrPanouri, 400, 5);
                 double estimatedOutputKWhPerDay = sp.calculateEstimatedOutputKWh();
                 double estimatedOutputKWhPerYear = estimatedOutputKWhPerDay * 365;
-                Console.WriteLine($"Estimated output for {nrPanouri.ToString()} panel(s) of 400W in one year: {estimatedOutputKWhPerYear} kWh");
+                double reducedConsumption = initialOutput - estimatedOutputKWhPerYear;
+                panouConsumFinal_TextBox2.Text = estimatedOutputKWhPerYear.ToString();
+                consumptionDiff_TextBox1.Text = reducedConsumption.ToString();
+                nrPanouri_TextBox.Text = "";
+                storeDataInExcelFile(consumptionDiff_TextBox1.Text, "optimizareAnualaPanou", 8);
+               /* Console.WriteLine($"Estimated output for {nrPanouri.ToString()} panel(s) of 400W in one year: {estimatedOutputKWhPerYear} kWh");
+                Console.WriteLine($"Consumption will be reduced with {reducedConsumption.ToString()}Kwh");*/
 
             }
             else {
@@ -110,8 +149,32 @@ namespace energyPowerOptimization.userControls
 
         private void optimizareBaterie_Button1_Click(object sender, EventArgs e)
         {
-            nrPanouri_TextBox.Enabled = false;
-            startProgressBar(battery_ProgressBar1);
+            if (nrBaterii_TextBox1.Text != "")
+            {
+                nrPanouri_TextBox.Enabled = false;
+                startProgressBar(battery_ProgressBar1);
+                int nrTurbine;
+                double initialOutput;
+                int.TryParse(nrBaterii_TextBox1.Text, out nrTurbine);
+                double.TryParse(consumInitial_TextBox.Text, out initialOutput);
+                EolianTurbine et = new EolianTurbine(nrTurbine,1500, 3);
+                double estimatedOutputKWhPerDay = et.CalculateEstimatedOutputKWh();
+                double estimatedOutputKWhPerYear = estimatedOutputKWhPerDay * 365;
+                double reducedConsumption = initialOutput - estimatedOutputKWhPerYear;
+                baterieConsumFinal_TextBox3.Text = estimatedOutputKWhPerYear.ToString();
+                consumptionDiff2_TextBox1.Text = reducedConsumption.ToString();
+                nrBaterii_TextBox1.Text = "";
+                storeDataInExcelFile(consumptionDiff2_TextBox1.Text, "optimizareTurbinaEoliana", 9);
+                /*  Console.WriteLine($"Estimated output for {nrTurbine.ToString()} eolian turbines of 1200W in one year: {estimatedOutputKWhPerYear} kWh");
+                  Console.WriteLine($"Consumption will be reduced with {reducedConsumption.ToString()}Kwh");*/
+
+            }
+            else
+            {
+                MessageBox.Show("Numar de turbine eoliene nespecificat!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+           
    
         }
     }

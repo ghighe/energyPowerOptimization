@@ -16,5 +16,6 @@ namespace energyPowerOptimization.userControls
         {
             InitializeComponent();
         }
+
     }
 }

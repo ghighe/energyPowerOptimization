@@ -48,6 +48,13 @@ namespace energyPowerOptimization.userControls
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nrBaterii_TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.consumptionDiff_TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.consumptionDiff2_TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.solarPanel_PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -93,9 +100,9 @@ namespace energyPowerOptimization.userControls
             this.optimizareBaterie_Button1.HoverState.ForeColor = System.Drawing.Color.Violet;
             this.optimizareBaterie_Button1.Location = new System.Drawing.Point(465, 433);
             this.optimizareBaterie_Button1.Name = "optimizareBaterie_Button1";
-            this.optimizareBaterie_Button1.Size = new System.Drawing.Size(228, 33);
+            this.optimizareBaterie_Button1.Size = new System.Drawing.Size(249, 33);
             this.optimizareBaterie_Button1.TabIndex = 8;
-            this.optimizareBaterie_Button1.Text = "optimizare cu baterie";
+            this.optimizareBaterie_Button1.Text = "optimizare cu turbine eoliene";
             this.optimizareBaterie_Button1.Click += new System.EventHandler(this.optimizareBaterie_Button1_Click);
             // 
             // solarPanel_ProgressBar1
@@ -123,6 +130,7 @@ namespace energyPowerOptimization.userControls
             this.panouConsumFinal_TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.panouConsumFinal_TextBox2.FocusedState.BorderColor = System.Drawing.Color.Violet;
             this.panouConsumFinal_TextBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.panouConsumFinal_TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panouConsumFinal_TextBox2.HoverState.BorderColor = System.Drawing.Color.Violet;
             this.panouConsumFinal_TextBox2.Location = new System.Drawing.Point(832, 140);
             this.panouConsumFinal_TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -147,6 +155,7 @@ namespace energyPowerOptimization.userControls
             this.baterieConsumFinal_TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.baterieConsumFinal_TextBox3.FocusedState.BorderColor = System.Drawing.Color.Violet;
             this.baterieConsumFinal_TextBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.baterieConsumFinal_TextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.baterieConsumFinal_TextBox3.HoverState.BorderColor = System.Drawing.Color.Violet;
             this.baterieConsumFinal_TextBox3.Location = new System.Drawing.Point(832, 473);
             this.baterieConsumFinal_TextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -178,7 +187,7 @@ namespace energyPowerOptimization.userControls
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(85, 317);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(209, 181);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(209, 199);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 22;
             this.guna2PictureBox2.TabStop = false;
@@ -189,7 +198,7 @@ namespace energyPowerOptimization.userControls
             this.solarPanel_RadioButton1.CheckedState.BorderThickness = 0;
             this.solarPanel_RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.solarPanel_RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.solarPanel_RadioButton1.Location = new System.Drawing.Point(37, 109);
+            this.solarPanel_RadioButton1.Location = new System.Drawing.Point(37, 148);
             this.solarPanel_RadioButton1.Name = "solarPanel_RadioButton1";
             this.solarPanel_RadioButton1.Size = new System.Drawing.Size(20, 20);
             this.solarPanel_RadioButton1.TabIndex = 23;
@@ -206,7 +215,7 @@ namespace energyPowerOptimization.userControls
             this.battery_RadioButton2.CheckedState.BorderThickness = 0;
             this.battery_RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.battery_RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.battery_RadioButton2.Location = new System.Drawing.Point(37, 410);
+            this.battery_RadioButton2.Location = new System.Drawing.Point(37, 449);
             this.battery_RadioButton2.Name = "battery_RadioButton2";
             this.battery_RadioButton2.Size = new System.Drawing.Size(20, 20);
             this.battery_RadioButton2.TabIndex = 24;
@@ -260,9 +269,9 @@ namespace energyPowerOptimization.userControls
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(829, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 18);
+            this.label2.Size = new System.Drawing.Size(218, 18);
             this.label2.TabIndex = 29;
-            this.label2.Text = "consum anual final";
+            this.label2.Text = "consum anual final optimizat";
             // 
             // label3
             // 
@@ -271,9 +280,9 @@ namespace energyPowerOptimization.userControls
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(829, 433);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 18);
+            this.label3.Size = new System.Drawing.Size(218, 18);
             this.label3.TabIndex = 30;
-            this.label3.Text = "consum anual final";
+            this.label3.Text = "consum anual final optimizat";
             // 
             // battery_ProgressBar1
             // 
@@ -327,11 +336,11 @@ namespace energyPowerOptimization.userControls
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(59, 514);
+            this.label5.Location = new System.Drawing.Point(22, 536);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 18);
+            this.label5.Size = new System.Drawing.Size(173, 18);
             this.label5.TabIndex = 35;
-            this.label5.Text = "Numar Baterii";
+            this.label5.Text = "Numar Turbine Eoliene";
             // 
             // nrBaterii_TextBox1
             // 
@@ -347,7 +356,7 @@ namespace energyPowerOptimization.userControls
             this.nrBaterii_TextBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nrBaterii_TextBox1.ForeColor = System.Drawing.Color.Black;
             this.nrBaterii_TextBox1.HoverState.BorderColor = System.Drawing.Color.Violet;
-            this.nrBaterii_TextBox1.Location = new System.Drawing.Point(192, 514);
+            this.nrBaterii_TextBox1.Location = new System.Drawing.Point(202, 536);
             this.nrBaterii_TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nrBaterii_TextBox1.Name = "nrBaterii_TextBox1";
             this.nrBaterii_TextBox1.PasswordChar = '\0';
@@ -356,11 +365,123 @@ namespace energyPowerOptimization.userControls
             this.nrBaterii_TextBox1.Size = new System.Drawing.Size(137, 26);
             this.nrBaterii_TextBox1.TabIndex = 34;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(1016, 140);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 21);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "kWh";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1016, 477);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 21);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "kWh";
+            // 
+            // consumptionDiff_TextBox1
+            // 
+            this.consumptionDiff_TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.consumptionDiff_TextBox1.BorderRadius = 5;
+            this.consumptionDiff_TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.consumptionDiff_TextBox1.DefaultText = "";
+            this.consumptionDiff_TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.consumptionDiff_TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.consumptionDiff_TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.consumptionDiff_TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.consumptionDiff_TextBox1.FocusedState.BorderColor = System.Drawing.Color.Violet;
+            this.consumptionDiff_TextBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.consumptionDiff_TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.consumptionDiff_TextBox1.HoverState.BorderColor = System.Drawing.Color.Violet;
+            this.consumptionDiff_TextBox1.Location = new System.Drawing.Point(832, 182);
+            this.consumptionDiff_TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.consumptionDiff_TextBox1.Name = "consumptionDiff_TextBox1";
+            this.consumptionDiff_TextBox1.PasswordChar = '\0';
+            this.consumptionDiff_TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.consumptionDiff_TextBox1.PlaceholderText = "0";
+            this.consumptionDiff_TextBox1.ReadOnly = true;
+            this.consumptionDiff_TextBox1.SelectedText = "";
+            this.consumptionDiff_TextBox1.Size = new System.Drawing.Size(81, 27);
+            this.consumptionDiff_TextBox1.TabIndex = 38;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(920, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 21);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "ec";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(680, 310);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 21);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "kWh";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(920, 520);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 21);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "ec";
+            // 
+            // consumptionDiff2_TextBox1
+            // 
+            this.consumptionDiff2_TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.consumptionDiff2_TextBox1.BorderRadius = 5;
+            this.consumptionDiff2_TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.consumptionDiff2_TextBox1.DefaultText = "";
+            this.consumptionDiff2_TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.consumptionDiff2_TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.consumptionDiff2_TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.consumptionDiff2_TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.consumptionDiff2_TextBox1.FocusedState.BorderColor = System.Drawing.Color.Violet;
+            this.consumptionDiff2_TextBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.consumptionDiff2_TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.consumptionDiff2_TextBox1.HoverState.BorderColor = System.Drawing.Color.Violet;
+            this.consumptionDiff2_TextBox1.Location = new System.Drawing.Point(832, 514);
+            this.consumptionDiff2_TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.consumptionDiff2_TextBox1.Name = "consumptionDiff2_TextBox1";
+            this.consumptionDiff2_TextBox1.PasswordChar = '\0';
+            this.consumptionDiff2_TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.consumptionDiff2_TextBox1.PlaceholderText = "0";
+            this.consumptionDiff2_TextBox1.ReadOnly = true;
+            this.consumptionDiff2_TextBox1.SelectedText = "";
+            this.consumptionDiff2_TextBox1.Size = new System.Drawing.Size(81, 27);
+            this.consumptionDiff2_TextBox1.TabIndex = 41;
+            // 
             // UC_optimizareConsum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.consumptionDiff2_TextBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.consumptionDiff_TextBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.nrBaterii_TextBox1);
             this.Controls.Add(this.label4);
@@ -407,5 +528,12 @@ namespace energyPowerOptimization.userControls
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox nrBaterii_TextBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox consumptionDiff_TextBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox consumptionDiff2_TextBox1;
     }
 }
