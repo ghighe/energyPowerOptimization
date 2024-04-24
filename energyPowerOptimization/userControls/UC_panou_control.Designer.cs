@@ -54,6 +54,7 @@ namespace energyPowerOptimization.userControls
             // 
             // products_chart
             // 
+            chartArea1.AxisX.IsStartedFromZero = false;
             chartArea1.AxisY.TitleFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.BackColor = System.Drawing.Color.Violet;
             chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
@@ -64,6 +65,7 @@ namespace energyPowerOptimization.userControls
             this.products_chart.Legends.Add(legend1);
             this.products_chart.Location = new System.Drawing.Point(176, 151);
             this.products_chart.Name = "products_chart";
+            this.products_chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "consumInitialTotal";

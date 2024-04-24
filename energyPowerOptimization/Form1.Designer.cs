@@ -29,7 +29,6 @@ namespace energyPowerOptimization
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.top_panel = new System.Windows.Forms.Panel();
             this.logo_upit_pic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,7 +83,7 @@ namespace energyPowerOptimization
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::energyPowerOptimization.Properties.Resources.green_energy_logo;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 58);
@@ -122,7 +121,7 @@ namespace energyPowerOptimization
             this.iesire_app_btn.HoverState.CustomBorderColor = System.Drawing.Color.Violet;
             this.iesire_app_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.iesire_app_btn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.iesire_app_btn.Image = ((System.Drawing.Image)(resources.GetObject("iesire_app_btn.Image")));
+            this.iesire_app_btn.Image = global::energyPowerOptimization.Properties.Resources.exit;
             this.iesire_app_btn.ImageSize = new System.Drawing.Size(30, 30);
             this.iesire_app_btn.Location = new System.Drawing.Point(924, 0);
             this.iesire_app_btn.Name = "iesire_app_btn";
@@ -148,13 +147,13 @@ namespace energyPowerOptimization
             this.panou_control_btn.HoverState.CustomBorderColor = System.Drawing.Color.Violet;
             this.panou_control_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panou_control_btn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.panou_control_btn.Image = ((System.Drawing.Image)(resources.GetObject("panou_control_btn.Image")));
+            this.panou_control_btn.Image = global::energyPowerOptimization.Properties.Resources.dashboard;
             this.panou_control_btn.ImageSize = new System.Drawing.Size(30, 30);
             this.panou_control_btn.Location = new System.Drawing.Point(638, 0);
             this.panou_control_btn.Name = "panou_control_btn";
             this.panou_control_btn.Size = new System.Drawing.Size(192, 50);
             this.panou_control_btn.TabIndex = 2;
-            this.panou_control_btn.Text = "Tablou de bord";
+            this.panou_control_btn.Text = "Grafic Optimizare";
             this.panou_control_btn.Click += new System.EventHandler(this.panou_control_btn_Click);
             // 
             // optimizare_consum_btn
@@ -174,7 +173,7 @@ namespace energyPowerOptimization
             this.optimizare_consum_btn.HoverState.CustomBorderColor = System.Drawing.Color.Violet;
             this.optimizare_consum_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.optimizare_consum_btn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.optimizare_consum_btn.Image = ((System.Drawing.Image)(resources.GetObject("optimizare_consum_btn.Image")));
+            this.optimizare_consum_btn.Image = global::energyPowerOptimization.Properties.Resources.renewable_energy;
             this.optimizare_consum_btn.ImageSize = new System.Drawing.Size(30, 30);
             this.optimizare_consum_btn.Location = new System.Drawing.Point(338, 0);
             this.optimizare_consum_btn.Name = "optimizare_consum_btn";
@@ -200,7 +199,7 @@ namespace energyPowerOptimization
             this.adauga_consumatori_btn.HoverState.CustomBorderColor = System.Drawing.Color.Violet;
             this.adauga_consumatori_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.adauga_consumatori_btn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.adauga_consumatori_btn.Image = ((System.Drawing.Image)(resources.GetObject("adauga_consumatori_btn.Image")));
+            this.adauga_consumatori_btn.Image = global::energyPowerOptimization.Properties.Resources.plus;
             this.adauga_consumatori_btn.ImageSize = new System.Drawing.Size(30, 30);
             this.adauga_consumatori_btn.Location = new System.Drawing.Point(61, 0);
             this.adauga_consumatori_btn.Name = "adauga_consumatori_btn";

@@ -9,8 +9,6 @@ namespace energyPowerOptimization.userControls
 {
     public partial class UC_adauga_consumatori : UserControl
     {
-
-        private readonly string filePath = "C:\\Users\\GHIGHE-I5\\Desktop\\energy_optimization.xlsx";
         private string consumWati = null;
         private string ore_utilizare = null;
         private string currentProduct = null;
@@ -31,7 +29,6 @@ namespace energyPowerOptimization.userControls
             }
         }
 
-       // private void init() {}
 
         private void storeDataInExcelFile(
             String val1,
@@ -43,7 +40,7 @@ namespace energyPowerOptimization.userControls
             double val7)
         {
           
-            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            using (var package = new ExcelPackage(new System.IO.FileInfo(Constants.filePath)))
             {
                //Console.WriteLine(package.Workbook.Worksheets.Count > 0);
                 //selecteaza prima pagina a excelului la index 0
@@ -85,12 +82,12 @@ namespace energyPowerOptimization.userControls
                 }
                 wasWrittenToExcel = true;
             }
-            MessageBox.Show("Data added successfully to DB");
+           // MessageBox.Show("Data added successfully to DB");
         }
 
         private void LoadDataFromExcelFile()
         {
-            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            using (var package = new ExcelPackage(new System.IO.FileInfo(Constants.filePath)))
             {
                 ExcelWorksheet ws = package.Workbook.Worksheets[0];
                 DataTable dt = new DataTable();

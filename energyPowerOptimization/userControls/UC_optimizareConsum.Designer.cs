@@ -29,7 +29,6 @@ namespace energyPowerOptimization.userControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_optimizareConsum));
             this.panouOptimizare_btn = new Guna.UI2.WinForms.Guna2Button();
             this.optimizareBaterie_Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.solarPanel_ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
@@ -172,7 +171,7 @@ namespace energyPowerOptimization.userControls
             // 
             this.solarPanel_PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.solarPanel_PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.solarPanel_PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("solarPanel_PictureBox1.Image")));
+            this.solarPanel_PictureBox1.Image = global::energyPowerOptimization.Properties.Resources.solarPanel;
             this.solarPanel_PictureBox1.ImageRotate = 0F;
             this.solarPanel_PictureBox1.Location = new System.Drawing.Point(85, 12);
             this.solarPanel_PictureBox1.Name = "solarPanel_PictureBox1";
@@ -183,7 +182,7 @@ namespace energyPowerOptimization.userControls
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.Image = global::energyPowerOptimization.Properties.Resources.eoliene;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(85, 317);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
@@ -419,9 +418,9 @@ namespace energyPowerOptimization.userControls
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(920, 188);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 21);
+            this.label7.Size = new System.Drawing.Size(35, 21);
             this.label7.TabIndex = 39;
-            this.label7.Text = "ec";
+            this.label7.Text = "Diff";
             // 
             // label8
             // 
@@ -441,9 +440,9 @@ namespace energyPowerOptimization.userControls
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(920, 520);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 21);
+            this.label9.Size = new System.Drawing.Size(35, 21);
             this.label9.TabIndex = 42;
-            this.label9.Text = "ec";
+            this.label9.Text = "Diff";
             // 
             // consumptionDiff2_TextBox1
             // 

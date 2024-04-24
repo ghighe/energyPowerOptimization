@@ -1,13 +1,10 @@
 ﻿using System.Windows.Forms;
 using OfficeOpenXml;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace energyPowerOptimization.userControls
 {
     public partial class UC_panou_control : UserControl
     {
-
-        private readonly string filePath = "C:\\Users\\GHIGHE-I5\\Desktop\\energy_optimization.xlsx";
         public UC_panou_control()
         {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -17,15 +14,14 @@ namespace energyPowerOptimization.userControls
 
         private void LoadDataFromExcelFile()
         {
-            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            using (var package = new ExcelPackage(new System.IO.FileInfo(Constants.filePath)))
             {
                 ExcelWorksheet ws = package.Workbook.Worksheets[0];
 
                 products_chart.Series["consumInitialTotal"].CustomProperties = "PointWidth = 1";
                 products_chart.Series["consumOptimizatCuPanouri"].CustomProperties = "PointWidth = 1";
                 products_chart.Series["consumOptimizatCuEoliane"].CustomProperties = "PointWidth = 1";
-                //creaza headerele pentru datatable pe baza excelului
-                //populeaza datatabelul dt cu valorile din excel incepem cu randul 2 sa nu aducem headerele din nou
+                
                 int startRow = 2;
                 for (int rowNum = startRow; rowNum <= ws.Dimension.End.Row; rowNum++)
                 {
@@ -46,12 +42,6 @@ namespace energyPowerOptimization.userControls
                         products_chart.Series["consumOptimizatCuPanouri"].Points.AddY(consumOptimizatPanouSolar);         
                        products_chart.Series["consumOptimizatCuEoliane"].Points.AddY(consumOptimizatEolianaNr);
 
-                        // Adjust the width of the bars
-                      
-
-
-                        /*products_chart.Series.Add(consumInitialTotal);
-                        products_chart.Series.Add(consumOptimizatTotal);*/
                     }
                 }
             }

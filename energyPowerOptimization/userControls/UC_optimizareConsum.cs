@@ -8,7 +8,7 @@ namespace energyPowerOptimization.userControls
     public partial class UC_optimizareConsum : UserControl
     {
 
-        private readonly string filePath = "C:\\Users\\GHIGHE-I5\\Desktop\\energy_optimization.xlsx";
+      
         public UC_optimizareConsum()
         {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -28,15 +28,13 @@ namespace energyPowerOptimization.userControls
         private void storeDataInExcelFile(String val1, String header, int index)
         {
 
-            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            using (var package = new ExcelPackage(new System.IO.FileInfo(Constants.filePath)))
             {
-                //Console.WriteLine(package.Workbook.Worksheets.Count > 0);
                 //selecteaza prima pagina a excelului la index 0
                 if (package.Workbook.Worksheets.Count >= 0)
                 {
                     ExcelWorksheet ws = package.Workbook.Worksheets[0];
 
-                    //MessageBox.Show(rowIndex.ToString());
                     //add headers in the first row
                     ws.Cells[1, index].Value = header;
                     //add data to the available row 
@@ -53,12 +51,12 @@ namespace energyPowerOptimization.userControls
                     return;
                 }
             }
-            MessageBox.Show("Data added successfully to DB");
+           // MessageBox.Show("Data added successfully to DB");
         }
 
         private void getTotalConsumptionfromExcel()
         {
-            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            using (var package = new ExcelPackage(new System.IO.FileInfo(Constants.filePath)))
             {
                 ExcelWorksheet ws = package.Workbook.Worksheets[0];
 
@@ -165,8 +163,6 @@ namespace energyPowerOptimization.userControls
                 consumptionDiff2_TextBox1.Text = reducedConsumption.ToString();
                 nrBaterii_TextBox1.Text = "";
                 storeDataInExcelFile(consumptionDiff2_TextBox1.Text, "optimizareTurbinaEoliana", 9);
-                /*  Console.WriteLine($"Estimated output for {nrTurbine.ToString()} eolian turbines of 1200W in one year: {estimatedOutputKWhPerYear} kWh");
-                  Console.WriteLine($"Consumption will be reduced with {reducedConsumption.ToString()}Kwh");*/
 
             }
             else

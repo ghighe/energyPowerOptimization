@@ -40,6 +40,4 @@ namespace energyPowerOptimization.Products
 
 }
 
-    //define our list of homeProducts
-
    

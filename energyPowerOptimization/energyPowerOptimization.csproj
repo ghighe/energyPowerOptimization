@@ -91,6 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="EolianTurbine.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -142,6 +143,7 @@
     <EmbeddedResource Include="userControls\UC_panou_control.resx">
       <DependentUpon>UC_panou_control.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="energy_optimization.xlsx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\energyPowerOptimization.Products.Product.datasource" />
     <None Include="Properties\Settings.settings">
@@ -162,6 +164,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solarPanel21.JPG" />
+    <None Include="Resources\solarPanel1.JPG" />
+    <None Include="Resources\renewable-energy1.png" />
+    <None Include="Resources\plus1.png" />
+    <None Include="Resources\green-energy_logo1.png" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\eoliene1.JPG" />
+    <None Include="Resources\dashboard1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
