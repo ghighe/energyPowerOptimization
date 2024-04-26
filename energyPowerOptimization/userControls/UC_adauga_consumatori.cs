@@ -111,6 +111,20 @@ namespace energyPowerOptimization.userControls
                         totalEnergieZi_TextBox.Text = ws.Cells["E2"].Text;
                         totalEnergieLuna_TextBox.Text = ws.Cells["F2"].Text;
                         totalEnergieAn_TextBox.Text = ws.Cells["G2"].Text;
+
+                        int dailyEnergy;
+                        double monthlyEnergy, yearlyEnergy;
+
+                        int.TryParse(totalEnergieZi_TextBox.Text, out dailyEnergy);
+                        double.TryParse(totalEnergieLuna_TextBox.Text, out monthlyEnergy);
+                        double.TryParse(totalEnergieAn_TextBox.Text, out yearlyEnergy);
+
+                        //on application close and start restore the initial variable values
+                        totalConsumptionDay = dailyEnergy;
+                        totalConsumptionMonth = monthlyEnergy;
+                        totalConsumptionYear = yearlyEnergy;
+
+                        //here i need to reassign the variables so the incrementation can continue 
                     }
 
                     DataRow row = dt.Rows.Add();
